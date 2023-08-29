@@ -1,0 +1,10 @@
+---
+title: The Sales Whale
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: default
+description: 
+url: https://thesaleswhale.com
+markdown: kramdown

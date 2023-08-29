@@ -1,0 +1,120 @@
+@import "bootstrap";
+@import "fontawesome";
+@import "regular";
+@import "arvo";
+@import "cardo";
+@import "roboto";
+
+// Our variables
+$base-font-family: 'Playtime', sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #1f3552;
+$background-color: #f9f7f2;
+$brand-color:      #20212f;
+
+$pink-color:       #f60865;
+$yellow-color:     #ffe121;
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+@font-face {
+  font-family: "Playtime";
+  src: url('/assets/fonts/playtime.ttf') format('truetype');
+}
+
+* {
+  color: $brand-color;
+  font-family: $base-font-family;
+}
+
+.container:not(.menu) {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.dark {
+  background-color: $brand-color;
+
+  p {
+    color: #fff;
+  }
+}
+
+.pink {
+  background-color: $pink-color;
+}
+
+.heading {
+  color: $pink-color;
+  font-size: 40px;
+}
+
+h2.heading span {
+  color: $yellow-color;
+}
+
+#main-menu {
+  background-color: $brand-color;
+
+  a span {
+    color: $yellow-color;
+    font-size: 30px;
+    margin: 20px;
+    text-transform: uppercase;
+  }
+}
+
+.card-text {
+  color: $brand-color;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding-top: 100px;
+  background: #3c31dd;
+}
+
+.curve {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  transform: translate(85%, 60%);
+  background-color: hsl(216, 21%, 16%);
+}
+
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  transform: translate(-4%, 40%);
+  z-index: -1;
+}
