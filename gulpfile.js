@@ -30,21 +30,9 @@ export const cssWatch = () => gulp.watch('./_css/**/*.scss', cssDev);
 
 export const jsDev = () => gulp.src([
       './node_modules/bootstrap/dist/js/bootstrap.min.js',
-      './node_modules/masonry-layout/dist/masonry.pkgd.min.js',
-      './_js/script.js'
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('script.js'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('js'));
-
-export const lyricsJsDev = () => gulp.src([
-      './node_modules/bootstrap/dist/js/bootstrap.min.js',
-      './node_modules/masonry-layout/dist/masonry.pkgd.min.js',
-      './_js/lyrics.js'
-    ])
-    .pipe(sourcemaps.init())
-    .pipe(concat('lyrics.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('js'));
 
@@ -65,7 +53,7 @@ export const jekyllServe = () => {
   jekyll.stderr.on('data', jekyllLogger);
 }
 
-export const dev = gulp.series(cssDev, jsDev, lyricsJsDev, gulp.parallel(jekyllServe, cssWatch, jsWatch));
+export const dev = gulp.series(cssDev, jsDev, gulp.parallel(jekyllServe, cssWatch, jsWatch));
 
 // Prod
 export const cssProd = () => gulp.src('./_css/style.scss')
@@ -73,8 +61,6 @@ export const cssProd = () => gulp.src('./_css/style.scss')
       includePaths: [
         './_css',
         './node_modules/bootstrap/scss',
-        './node_modules/@fontsource',
-        './node_modules/@fortawesome/fontawesome-free/scss'
       ],
     })
     .on('error', sass.logError))
@@ -89,8 +75,6 @@ export const cssProd = () => gulp.src('./_css/style.scss')
     .pipe(gulp.dest('./_site/css'));
 
 export const jsProd = () => gulp.src([
-      './node_modules/bootstrap/dist/js/bootstrap.min.js',
-      './node_modules/masonry-layout/dist/masonry.pkgd.min.js',
       './_js/script.js'
     ])
     .pipe(sourcemaps.init())
@@ -101,16 +85,6 @@ export const jsProd = () => gulp.src([
       }
     }))
     .pipe(concat('script.js'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./_site/js'));
-
-export const lyricsJsProd = () => gulp.src([
-      './node_modules/bootstrap/dist/js/bootstrap.min.js',
-      './node_modules/masonry-layout/dist/masonry.pkgd.min.js',
-      './_js/lyrics.js'
-    ])
-    .pipe(sourcemaps.init())
-    .pipe(concat('lyrics.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./_site/js'));
 
@@ -131,6 +105,6 @@ export const jekyll = (gulpCallback) => {
   jekyll.on('exit', gulpCallback);
 }
 
-export const build = gulp.series(jekyll, cssProd, jsProd, lyricsJsProd);
+export const build = gulp.series(jekyll, cssProd, jsProd);
 
 export default dev;
