@@ -8,10 +8,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@fontsource/arvo": "^5.0.7",
-    "@fontsource/cardo": "^5.0.7",
-    "@fontsource/roboto": "^5.0.7",
-    "@fortawesome/fontawesome-free": "^6.4.2",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "bootstrap": "^5.3.1",
     "child_process": "^1.0.2",
@@ -24,7 +20,6 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
-    "masonry-layout": "^4.2.2",
     "postcss": "^8.4.27",
     "sass": "^1.64.2"
   }
