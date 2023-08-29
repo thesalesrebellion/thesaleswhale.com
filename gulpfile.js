@@ -75,7 +75,7 @@ export const cssProd = () => gulp.src('./_css/style.scss')
     .pipe(gulp.dest('./_site/css'));
 
 export const jsProd = () => gulp.src([
-      './_js/script.js'
+      './node_modules/bootstrap/dist/js/bootstrap.min.js',
     ])
     .pipe(sourcemaps.init())
     .pipe(terser({
