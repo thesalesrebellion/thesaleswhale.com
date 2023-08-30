@@ -15,16 +15,16 @@ permalink: /
       <div class="text-center">
         <a class="btn btn-lg btn-dark rounded-pill">Bring Home a Copy</a>
       </div>
+      <img src="/assets/img/orca.webp" class="orca">
     </div>
   </div>
 </div>
 
-<div class="container-fluid pt-5">
+<div class="container-fluid pt-5" style="position:relative;z-index:-2">
   <div class="row align-items-start dark pt-5">
     <div class="col col-3">
     </div>
     <div class="col col-6">
-      <img src="/assets/img/orca.webp" style="width:300px">
       <h2 class="text-center heading">Explore <span>the story</span></h2>
       <p>Lorem ipsum dolor sit amet consectetur adipiscing elit platea risus varius, imperdiet duis quam at mi ridiculus laoreet maecenas facilisi velit, nisi bibendum rhoncus senectus potenti eget feugiat dignissim magna. Auctor magnis class primis penatibus mi tincidunt eros praesent ante, tellus sociosqu pretium enim tristique eleifend elementum nullam sagittis, non lacus taciti feugiat et a ligula leo. Urna nisl neque ultricies suscipit hendrerit libero enim phasellus, porta taciti quisque eros ultrices semper natoque scelerisque primis, dignissim hac nec cum arcu orci aliquam.</p>
     </div>
@@ -33,7 +33,7 @@ permalink: /
   </div>
 </div>
 
-<div class="container-fluid dark">
+<div class="container-fluid dark clouds">
   <div class="container">
     <div class="row align-items-start">
       <div class="col col-12">
@@ -41,29 +41,29 @@ permalink: /
       </div>
     </div>
     <div class="row align-items-start">
-      <div class="col col-3">
+      <div class="col col-2">
       </div>
-      <div class="col col-3">
+      <div class="col col-4">
         <div class="card rounded-5">
           <div class="card-body text-center">
             <h3 class="card-title">Real-Life Book</h3>
-            <img src="/assets/img/sales-whale-book-small.webp" class="img-fluid">
-            <a class="btn btn-lg btn-dark rounded-pill">Bring Home a Copy</a>
+            <img src="/assets/img/sales-whale-book-small.webp" class="img-fluid pb-3">
+            <a class="btn btn-lg btn-dark rounded-pill mb-4">Bring Home a Copy</a>
             <p class="card-text">Available on Amazon</p>
           </div>
         </div>
       </div>
-      <div class="col col-3">
+      <div class="col col-4">
         <div class="card rounded-5">
           <div class="card-body text-center">
             <h3 class="card-title">Digital E-Book</h3>
-            <img src="/assets/img/sales-whale-book-small.webp" class="img-fluid">
-            <a class="btn btn-lg btn-dark rounded-pill">Download</a>
+            <img src="/assets/img/sales-whale-book-small.webp" class="img-fluid pb-3">
+            <a class="btn btn-lg btn-dark rounded-pill mb-4">Download</a>
             <p class="card-text">Read on your phone, tablet, or computer</p>
           </div>
         </div>
       </div>
-      <div class="col col-3">
+      <div class="col col-2">
       </div>
     </div>
   </div>
@@ -146,8 +146,12 @@ permalink: /
 </div>
 
 <style>
+p {
+  font-size: 24px;
+}
+
 .bubbles {
-  background-image: url('/assets/img/bubbles.png');
+  background-image: url('/assets/img/bubbles.webp');
 }
 
 .wave {
@@ -168,5 +172,33 @@ permalink: /
 
 .carousel-control-next-icon {
    background-image: url("/assets/img/right-chevron.webp");
+}
+
+.btn {
+  font-family: Montserrat;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.dark p.card-text {
+  color: #1f3552;
+  font-family: Montserrat;
+  font-size: 12px;
+}
+
+.clouds {
+  background-image: url(/assets/img/clouds.webp);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  padding-bottom: 200px;
+}
+
+.orca {
+  margin-left: 300px;
+  margin-top: -50px;
+  position: absolute;
+  width: 300px;
+  z-index: -1;
 }
 </style>
