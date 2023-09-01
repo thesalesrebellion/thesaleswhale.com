@@ -65,7 +65,7 @@ permalink: /
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid coral">
   <div class="container">
     <div class="row align-items-start">
       <div class="col col-lg-10 offset-lg-1">
@@ -100,7 +100,7 @@ permalink: /
 </div>
 
 <div class="container-fluid dark bubbles">
-  <div class="container">
+  <div class="container" style="padding-top:0">
     <div class="row align-items-start">
       <div class="col col-12">
         <h3 style="color: #f60865">About the Author</h3>
@@ -121,9 +121,9 @@ permalink: /
   <div class="container">
     <div class="row align-items-start">
       <div class="col col-12">
-        <h2 class="heading">
+        <h2 class="heading" style="padding-top:70px">
           <span style="color:#20212f">The importance of</span> being real <span style="color:#20212f">in sales</span>
-          <img src="/assets/img/narwhal-orca.webp" style="width:300px">
+          <img src="/assets/img/narwhal-orca.webp" style="float:right;width:400px">
         </h2>
         <div style="column-count: 2">
           <p>Lorem ipsum dolor sit amet consectetur adipiscing elit platea risus varius, imperdiet duis quam at mi ridiculus laoreet maecenas facilisi velit, nisi bibendum rhoncus senectus potenti eget feugiat dignissim magna. Auctor magnis class primis penatibus mi tincidunt eros praesent ante, tellus sociosqu pretium enim tristique eleifend elementum nullam sagittis, non lacus taciti feugiat et a ligula leo.</p>
@@ -138,6 +138,10 @@ permalink: /
 </div>
 
 <style>
+h2 {
+  padding-bottom: 20px;
+}
+
 p {
   font-size: 24px;
 }
@@ -146,9 +150,15 @@ p {
   background-image: url('/assets/img/bubbles.webp');
 }
 
+.coral {
+  background: url('/assets/img/coral.webp') no-repeat bottom;
+  background-size: contain;
+  padding-bottom: 200px;
+}
+
 .wave {
-   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 200'%3E%3Cpath d='M 0,100 C 150,200 350,0 500,100 L 500,00 L 0,0'  fill='rgb(32, 33, 47)'/%3E%3C/svg%3E");
-   background-repeat: no-repeat;
+  background: url('/assets/img/wave.webp') no-repeat top;
+  background-size: contain;
 }
 
 .carousel-inner {
