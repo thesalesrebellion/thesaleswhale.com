@@ -16,20 +16,16 @@ permalink: /
       <div class="text-center">
         <a class="btn btn-lg btn-dark rounded-pill">Bring Home a Copy</a>
       </div>
-      <img src="/assets/img/orca.webp" class="orca">
+      <img src="/assets/img/orca.webp" class="orca d-none d-xl-block">
     </div>
   </div>
 </div>
 
-<div class="container-fluid pt-5" style="position:relative;z-index:-2">
+<div class="container-fluid pt-5" style="position:relative;z-index:0">
   <div class="row align-items-start dark pt-5">
-    <div class="col col-3">
-    </div>
-    <div class="col col-6">
-      <h2 class="text-center heading">Explore <span>the story</span></h2>
+    <div class="col col-12 col-lg-4 offset-lg-4 text-center">
+      <h2 class="heading">Explore <span>the story</span></h2>
       <p>Follow along with Owen the Narwhal and Dale the Whale as they seek out the true meaning of sales. From unlearning a very generic and status quo approach to seeking out non-traditional ways to connect and impact the community around them. Owen and Dale go on a wild adventure of being different, embracing risk and understanding servant leadership. Learn a more Rebellious and foundational way to sell that puts people first as you journey the deep blue ocean with our heroes!</p>
-    </div>
-    <div class="col col-3">
     </div>
   </div>
 </div>
@@ -69,9 +65,9 @@ permalink: /
 <div class="container-fluid coral">
   <div class="container">
     <div class="row align-items-start">
-      <div class="col col-lg-10 offset-lg-1">
+      <div class="col col-lg-12" style="position: relative">
         <h2 class="text-center heading" style="color:#523c62">What Parents Are Saying...</h2>
-        <div id="testimonials" class="carousel slide mb-4" data-bs-ride="carousel">
+        <div id="testimonials" class="carousel slide mr-5 mb-4 ml-5" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <p>&ldquo;What a refreshing approach to sales that is not only fun for the kids but enjoyable for the parents reading it!&rdquo;</p>
@@ -92,6 +88,15 @@ permalink: /
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+        <div class="octopus floating-1 d-none d-md-block">
+          <img src="/assets/img/octopus.webp">
+        </div>
+        <div class="fish floating-2 d-none d-md-block">
+          <img src="/assets/img/fish.webp">
+        </div>
+        <div class="shark floating-3 d-none d-md-block">
+          <img src="/assets/img/shark.webp">
+        </div>
         <div class="text-center">
           <a class="btn btn-lg btn-dark rounded-pill">Bring Home a Copy</a>
         </div>
@@ -106,7 +111,7 @@ permalink: /
       <div class="col col-12">
         <h3 style="color: #f60865">About the Author</h3>
         <h2 class="heading"><span>How Do I Explain My Career in the Classroom?</span></h2>
-        <div style="column-count: 2">
+        <div class="two-column">
           <p>Sales is all about service. It’s about what we can do for the community we seek to serve. If I sell copiers, I don’t push the product and all of its features on the people I think might want to buy one. Instead I seek to understand their work environment and how my copier helps fix problems they might have to deal with. Or, how my copier can better their existing environment and the gaps they might be experiencing by not knowing what else might be available to them. It’s also very important to give a great experience to those we seek to serve. Creativity in sales is the recipe to unforgettable experiences and earning the trust of the community you’re selling to. In a nutshell, sales is not about your product or service. It’s about the problems you fix, the way you show up, the experience you give and the legacy of servant leadership you’re living out daily.</p>
           <div class="text-center">
             <a class="btn btn-lg pink rounded-pill">Bring Home a Copy</a>
@@ -120,12 +125,12 @@ permalink: /
 <div class="container-fluid wave">
   <div class="container">
     <div class="row align-items-start">
-      <div class="col col-12">
+      <div class="col col-12 text-center">
         <h2 class="heading" style="padding-top:70px">
           <span style="color:#20212f">The importance of</span> being real <span style="color:#20212f">in sales</span>
-          <img src="/assets/img/narwhal-orca.webp" style="float:right;width:400px">
+          <img src="/assets/img/narwhal-orca.webp" class="d-none d-xl-block" style="float:right;width:400px">
         </h2>
-        <div style="column-count: 2">
+        <div class="two-column">
           <p>Sales has earned a bad reputation over the years because so many professionals have jumped in the fast lane and done “whatever it takes” to achieve instant gratification. Too many put their focus and the purpose of why they’re in our profession on gaining power over their prospect and the commission check they earn from the sale&hellip; This is not the way. Being more vulnerable, empathetic and servant leader minded yields better, long lasting results. Because it challenges you to take risks, embrace discomfort and to be more authentic with everyone you come across. These ingredients create long lasting and trust based relationships with other humans who will in-turn reward you with their loyalty throughout their time knowing you This is the way.</p>
         </div>
         <div class="text-center">
@@ -155,6 +160,12 @@ h2 {
 
 p {
   font-size: 24px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .two-column {
+    column-count: 2;
+  }
 }
 
 .bubbles {
@@ -223,6 +234,76 @@ p {
   margin-top: -50px;
   position: absolute;
   width: 300px;
-  z-index: -1;
+  z-index: 1;
 }
+
+.octopus {
+  left: 0;
+  position: absolute;
+  top: -200px;
+}
+
+.octopus img {
+  width: 300px;
+}
+
+.fish {
+  position: absolute;
+  right: 0;
+  top: -100px;
+}
+
+.fish img {
+  width: 150px;
+}
+
+.shark {
+  bottom: -400px;
+  position: absolute;
+  right: 0;
+}
+
+.shark img {
+  width: 300px;
+}
+
+.floating-1 {
+	animation-name: floating-1;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-1 {
+	0% { transform: translate(0, 5px); }
+	50% { transform: translate(0, 10px); }
+	100% { transform: translate(0, 5px); }
+}
+
+.floating-2 {
+	animation-name: floating-2;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-2 {
+	0% { transform: translate(0, 0px); }
+	50% { transform: translate(0, 15px); }
+	100% { transform: translate(0, -0px); }
+}
+
+.floating-3 {
+	animation-name: floating-3;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-3 {
+	0% { transform: translate(0, 3px); }
+	50% { transform: translate(0, 25px); }
+	100% { transform: translate(0, 3px); }
+}
+
 </style>
