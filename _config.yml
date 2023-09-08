@@ -8,3 +8,6 @@ defaults:
 description: 
 url: https://thesaleswhale.com
 markdown: kramdown
+book:
+  paperback: https://www.amazon.com/dp/B0CHL9MZ51/
+  kindle: https://www.amazon.com/Sales-Whale-Dale-Dupree-ebook/dp/B0CDXC4291/
