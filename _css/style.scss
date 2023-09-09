@@ -27,6 +27,11 @@ $on-laptop:        800px;
   src: url('/assets/fonts/playtime.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
 * {
   color: $brand-color;
   font-family: $base-font-family;
