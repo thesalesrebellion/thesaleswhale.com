@@ -47,6 +47,10 @@ $on-laptop:        800px;
 
 .pink {
   background-color: $pink-color;
+
+  &:hover {
+    background-color: #ff77ac;
+  }
 }
 
 .heading {
