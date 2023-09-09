@@ -184,11 +184,17 @@ section {
 
 .btn {
   font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
   padding: 20px;
   text-transform: uppercase;
+}
+
+.card-body .btn {
   display: block;
-  max-width: 70%;
   margin: 0 auto;
+  max-width: 70%;
 }
 
 .dark p.card-text {
