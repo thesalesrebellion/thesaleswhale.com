@@ -139,6 +139,11 @@ section {
 
 .bubbles {
   background-image: url('/assets/img/bubbles.webp');
+  background-repeat:repeat;
+
+  p {
+    color: #fff;
+  }
 }
 
 .coloring-pages {
