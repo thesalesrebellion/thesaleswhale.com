@@ -86,10 +86,6 @@ h2.heading span {
   }
 }
 
-.card-text {
-  color: $brand-color;
-}
-
 section {
   position: relative;
   display: flex;
@@ -131,7 +127,7 @@ section {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@include media-breakpoint-up(xl) {
   .two-column {
     column-count: 2;
   }
@@ -143,11 +139,25 @@ section {
 
   p {
     color: #fff;
+
+    &.card-text {
+      color: $brand-color;
+    }
+  }
+}
+
+.navbar-toggler {
+  background-color: #fff;
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-brand img {
+    width: 200px;
   }
 }
 
 .coloring-pages {
-  background-color: #20212f;
+  background-color: $brand-color;
   border-radius: 20px;
   padding: 0 5% 50px;
 
