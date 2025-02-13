@@ -1,7 +1,5 @@
-name: Build
+name: Sales Whale Build
 on:
-  schedule:
-    - cron: "0 0 * * *"
   push:
     branches: master
 permissions:
@@ -10,28 +8,23 @@ permissions:
   id-token: write
 jobs:
   build:
-    name: Jekyll build
+    name: HTML build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.0'
-          bundler-cache: true
+      - uses: actions/checkout@v4
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with: 
-          node-version: 16
+          node-version: 20
           cache: 'npm'
       - name: Run gulp
         run: |
           npm install
           gulp build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
   # Deployment job
   deploy:
     environment:
@@ -42,4 +35,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
