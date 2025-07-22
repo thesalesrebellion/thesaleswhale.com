@@ -15,6 +15,7 @@ export default function (eleventyConfig) {
     'site.webmanifest': 'site.webmanifest',
   });
   eleventyConfig.addGlobalData('site_title', 'The Sales Whale');
+  eleventyConfig.addGlobalData('domain', 'https://www.thesaleswhale.com/');
   eleventyConfig.setIncludesDirectory('_includes');
   eleventyConfig.setLayoutsDirectory('_layouts');
 };
